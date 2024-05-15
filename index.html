@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<!-- FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="content-header">
+            <img src="images/logo-nobg.png" class="logo">
+            <div class="header-text">
+                <h3>ASSOCIAZIONE SPORTIVA PARROCHIALE</h3>
+                <h1>VIRTUS SANT'ELENA</h1>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <div class="navbar" id="navbar">
+        <a class="active">Home</a>
+        <a href="/about.html">Chi siamo</a>
+        <a href="#">Squadre</a>
+        <a href="#">Dirigenti</a>
+        <a href="#" class="right">Link</a>
+    </div>
+
+    <div class="content" id="content">
+        <div class="flex-container">
+            <div class="flex-item-left">
+                <img class="pic" src="images/baby.jpg">
+            </div>
+            <div class="flex-item-right">
+                <h1><span>Benvenuti nel sito ufficiale di</span><br>Associazione Parrochiale Virtus Sant'Elena</h1>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a href="#" target="_blank">Scopri di più!</a>
+                </div> 
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item-left" style="flex:60%">
+                <h2>I nostri valori <span>VIRTUS!</span></h2>
+                <div class="description">
+                    <p>
+                        Al centro di tutto ciò che facciamo ci sono i valori della parrocchia: solidarietà, inclusione e rispetto. Crediamo che lo sport sia uno strumento potente per trasmettere e consolidare questi principi nella vita di tutti i giorni.
+                        <br>
+                        Indipendentemente dal livello di abilità o esperienza, c'è un posto per te nella nostra associazione. Dalle squadre giovanili ai gruppi di adulti, tutti sono i benvenuti a partecipare e a crescere con noi.
+                    </p>
+                    <a href="#" target="_blank">Scopri di più!</a>
+                </div>
+            </div>
+            <div class="flex-item-right"  style="background-image: url('/images/children.jpg'); background-position: bottom; background-size: cover; flex:40%">
+            </div>
+        </div>
+    </div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    var navbar = document.querySelector('.navbar');
+    var content = document.getElementById('content');
+    if (window.scrollY > 0) {
+        header.style.height = '20vh'; // Modifica l'altezza quando lo scroll è superiore a 0
+        navbar.style.marginTop = '20vh';
+        content.style.paddingTop = '50vh';
+    } else {
+        header.style.height = '70vh'; // Ripristina l'altezza originale quando si torna in cima
+        navbar.style.marginTop = '70vh';
+        content.style.paddingTop = '80vh';
+    }
+});
+
+</script>
+</body>
+</html>

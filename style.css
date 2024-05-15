@@ -1,0 +1,217 @@
+:root {
+    /* palette color */
+    --black: #000000;
+    --white: #ffffff;
+    --whitesmoke: whitesmoke;
+    /* from logo */
+    --green0: #1abc9c;
+    --green1: #99c00f;
+    --green2: #51a327;
+    --green3: #31701f;
+    --blacktxt: #1a171e;
+    --graytxt: #818183;
+    /* from game image */
+    --green4: #367c2e;
+    --green5: #b5ddb1;
+    --green6: #99d892;
+    /* from the field */
+    --darkgreen: #2f4c28;
+    --terra1: #c0af7d;
+    --terra2: #edda9a;
+    --terra3: #d8c391;
+    --campo: #717b55;
+  }
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    /*font-family: "Kanit", sans-serif;*/
+    font-family: "Radio Canada Big", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(
+        to right,
+        rgba(243, 243, 243, 0.889),
+        rgba(246, 245, 245, 0.476),
+        rgba(255, 255, 255, 0.217)
+      ),
+      url("images/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--blacktxt);
+    z-index: 1000;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.5s;
+    margin-bottom: 20vh; /* Aggiunge margine inferiore all'header per far spazio al navbar */
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Ridimensiona il logo come desiderato */
+}
+
+.header-text {
+    text-align: center; /* Allinea il testo a destra */
+}
+
+.header h1 {
+    font-size: 3em; /* Ridimensiona il testo come desiderato */
+    margin: 0;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.5em; /* Ridimensiona il testo come desiderato */
+}
+
+.navbar {
+    overflow: hidden;
+    background-color:  var(--darkgreen);
+    position: fixed;
+    transition: height 1.5s;
+    margin-top: 70vh;
+    z-index: 1000; /* Assicura che il navbar sia sopra l'header */
+    width: 100%;
+    transition: margin-top 0.5s;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #51a3275a;
+}
+
+.navbar a.active {
+    background-color: var(--green2);
+    color: white;
+}
+  
+  /* container */
+  .content {  
+    transition: padding-top 0.5s;
+    padding-top: 75vh;
+    min-height: 100vh;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5% 0;
+  }
+  
+  .flex-item-left {
+    flex: 40%;
+  }
+
+  .flex-item-right {
+    flex: 60%;
+    padding: 0 5% 2% 0;
+  }
+
+.pic{
+  width: 50%;
+  border-radius: 50%;
+  height: auto;
+}
+
+.description p{
+  padding: 0 3%;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.content a:link, .content a:visited {
+  border: 2px solid var(--green3);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  color: var(--green3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.content a:hover, .content a:active {
+  background-color: var(--darkgreen);
+  color: whitesmoke;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+span{
+  color: var(--green2);
+  font-family: "Satisfy", cursive;
+}
+
+
+  .footer {
+    padding: 20px;
+    height: 20vh;
+    text-align: center;
+    background: linear-gradient(
+        to right,
+        rgba(245, 246, 245, 0.852),
+        rgba(246, 245, 245, 0.85)
+      ),
+      url("images/bg-logos.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .header{
+        padding-top: 0%;
+    }
+    .header h1{
+        font-size: 2.1em;
+    }
+    .header h3{
+        font-size: 1.0em;
+    }
+
+    .logo{
+        width: 100px;
+    }
+    .column {
+      width: 100%;
+    }
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
